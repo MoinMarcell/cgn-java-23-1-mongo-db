@@ -33,8 +33,12 @@ public class CatService {
         return repository.save(catToAdd);
     }
 
-    public Cat getById(String id){
+    public Cat getCatById(String id){
         return repository.findById(id).orElseThrow(NoSuchElementException::new);
+    }
+
+    public Cat getCatByName(String name){
+        return repository.findCatByName(name).orElseThrow(NoSuchElementException::new);
     }
 
     public void deleteCatById(String id){
