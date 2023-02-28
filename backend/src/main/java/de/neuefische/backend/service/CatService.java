@@ -5,7 +5,6 @@ import de.neuefische.backend.repository.CatRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class CatService {
@@ -31,14 +30,6 @@ public class CatService {
                 cat.birthdate()
         );
         return repository.save(catToAdd);
-    }
-
-    public Cat getCatById(String id){
-        return repository.findById(id).orElseThrow(NoSuchElementException::new);
-    }
-
-    public Cat getCatByName(String name){
-        return repository.findCatByName(name).orElseThrow(NoSuchElementException::new);
     }
 
     public void deleteCatById(String id){
