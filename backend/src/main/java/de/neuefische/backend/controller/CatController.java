@@ -21,6 +21,11 @@ public class CatController {
         return service.getAllCats();
     }
 
+    @GetMapping("/{id}")
+    public Cat getCatById(@PathVariable String id){
+        return service.getById(id);
+    }
+
     @PostMapping
     public Cat addCat(@RequestBody Cat cat){
         return service.addCat(cat);
