@@ -47,7 +47,7 @@ jobs:
     needs: build-backend
     environment:
       name: production-fly.io
-      url: https://YOUR-PROJECT.fly.dev/
+      url: https://patient-shape-1521.fly.dev/
     env:
       FLY_API_TOKEN: ${{ secrets.FLY_API_KEY }}
     steps:
