@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Document("cats")
+@Document("cat")
 public record Cat(
         @Id
         String id,
