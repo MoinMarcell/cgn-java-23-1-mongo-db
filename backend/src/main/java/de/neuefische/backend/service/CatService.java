@@ -18,7 +18,7 @@ public class CatService {
     }
 
     public List<Cat> getAllCats(){
-        return repository.getCats().values().stream().toList();
+        return repository.findAll();
     }
 
     public Cat addCat(Cat cat){
@@ -29,10 +29,10 @@ public class CatService {
                 cat.isHealthy(),
                 cat.birthdate()
         );
-        return repository.addCat(catToAdd);
+        return repository.save(catToAdd);
     }
 
     public void deleteCatById(String id){
-        repository.deleteCatById(id);
+        repository.deleteById(id);
     }
 }
