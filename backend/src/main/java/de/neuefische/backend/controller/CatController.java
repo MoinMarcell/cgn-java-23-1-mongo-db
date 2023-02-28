@@ -23,7 +23,7 @@ public class CatController {
 
     @GetMapping("/{id}")
     public Cat getCatById(@PathVariable String id){
-        return service.getById(id);
+        return service.getCatById(id);
     }
 
     @PostMapping
